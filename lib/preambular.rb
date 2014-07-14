@@ -1,7 +1,7 @@
-require 'preamble/version'
+require 'preambular/version'
 require 'yaml'
 
-class Preamble
+class Preambular
   
   DEFAULTS = {
     :external_encoding => Encoding.default_external
@@ -79,7 +79,7 @@ class Preamble
 
   def self.load_multiple(*paths)
     options = paths.last.is_a?(Hash) ? paths.pop : {}
-    paths.map{ |path| Preamble.load(path, options) }
+    paths.map{ |path| Preambular.load(path, options) }
   end
 
 end
